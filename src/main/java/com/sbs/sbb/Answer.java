@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Getter
 @Setter
@@ -24,8 +23,4 @@ public class Answer {
     //필수
     @ManyToOne
     private Question question;
-
-    @OneToMany(mappedBy = "question")
-    private List<Answer> answerList;
-
 }

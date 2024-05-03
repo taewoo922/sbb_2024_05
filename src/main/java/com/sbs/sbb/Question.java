@@ -29,4 +29,5 @@ public class Question {
     // 선택
     @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
     private List<Answer> answerList;
+
 }
