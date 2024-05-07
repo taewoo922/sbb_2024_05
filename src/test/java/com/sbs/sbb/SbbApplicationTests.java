@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 @Transactional
-@Rollback(value = true)
+//@Rollback(value = true)
 class SbbApplicationTests {
 
 
