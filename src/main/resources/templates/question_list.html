@@ -1,8 +1,21 @@
-<DOCTYPE html>
-    <html land = "ko">
-    <head>
-        <meta charset="UTF-8">
-        <h1 style="color:red;">[[${questionList}]]</h1>
-    </head>
-    </html>
-</DOCTYPE>
+ <h1 style="color:red;">[[${questionList}]]</h1>
+ <table border="1">
+     <thead>
+         <tr>
+             <th>번호</th>
+             <th>제목</th>
+             <th>작성일시</th>
+         </tr>
+     </thead>
+     <tbody>
+         <tr th:each="q : ${questionList}">
+             <td th:text="${q.id}"></td>
+             <td th:text="${q.subject}"></td>
+             <td th:text="${q.createDate}"></td>
+         </tr>
+         <tr>
+
+         </tr>
+     </tbody>
+ </table>
+
