@@ -39,7 +39,9 @@ public class QuestionController {
     // QuestionForm 변수는 model.addAttribute 없이 바로 뷰에서 접근할 수 있다.
     // QuestionForm questionForm 써주는 이유 : question_form.html 에서 questionForm 변수가 없으면 실행이 안되기 때문에
     // 빈 객체라도 만든다.
+//    public String questionCreate(Model model) {
     public String questionCreate(QuestionForm questionForm) {
+//        model.addAttribute("questionForm", new QuestionForm());
         return "question_form";
     }
 
