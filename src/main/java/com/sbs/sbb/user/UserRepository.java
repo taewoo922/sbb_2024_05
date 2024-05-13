@@ -10,5 +10,7 @@ public interface UserRepository extends JpaRepository<SiteUser, Integer> {
     @Transactional
     @Modifying
     @Query(value="ALTER TABLE site_user AUTO_INCREMENT = 1", nativeQuery = true)
-    void createAutoIncreament();
+
+
+    void clearAutoIncreament();
 }

@@ -18,5 +18,6 @@ public interface QuestionRepository extends JpaRepository<Question, Integer> {
     @Modifying
     // nativeQuery = true 여야 MySQL 쿼리 문법 사용 가능
     @Query(value="ALTER TABLE question AUTO_INCREMENT = 1", nativeQuery = true)
-    void createAutoIncreament();
+
+    void clearAutoIncreament();
 }
