@@ -1,6 +1,7 @@
 package com.sbs.sbb.Question;
 
 import com.sbs.sbb.Answer.Answer;
+import com.sbs.sbb.user.SiteUser;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -41,4 +42,6 @@ public class Question {
         a.setQuestion(this);
         answerList.add(a);
     }
+    @ManyToOne
+    private SiteUser author;
 }
