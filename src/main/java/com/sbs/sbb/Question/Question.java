@@ -10,6 +10,7 @@ import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -36,12 +37,8 @@ public class Question {
     @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
     @LazyCollection(LazyCollectionOption.EXTRA)
     //answerList.size(); 함수가 실행 될 떄 SELECT COUNT 실행
-    private List<Answer> answerList;
+    private List<Answer> answerList = new ArrayList<>();
 
-    public void addAnswer(Answer a) {
-        a.setQuestion(this);
-        answerList.add(a);
-    }
     @ManyToOne
     private SiteUser author;
 }
