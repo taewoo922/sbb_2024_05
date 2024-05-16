@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -29,4 +31,12 @@ public class Answer {
 
     @ManyToOne
     private SiteUser author;
+
+    @ManyToMany
+    Set<SiteUser> voters = new LinkedHashSet<>();
+    //HashSet은 순서가 보장이 안됨 LinkedHashSet은 순서가 보장됨
+
+    public void addVoter(SiteUser voter) {
+        voters.add(voter);
+    }
 }
