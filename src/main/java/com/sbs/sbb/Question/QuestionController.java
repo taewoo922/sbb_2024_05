@@ -133,4 +133,6 @@ public class QuestionController {
 
         return String.format("redirect:/question/detail/%s".formatted(id));
     }
+
+
 }
