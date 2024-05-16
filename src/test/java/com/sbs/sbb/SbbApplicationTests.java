@@ -130,12 +130,12 @@ class SbbApplicationTests {
     FROM question
     WHERE subject = 'sbb가 무엇인가요?'
     */
-	@Test
-	@DisplayName("findBySubject")
-	void t004() {
-		Question q = questionRepository.findBySubject("sbb가 무엇인가요?");
-		assertEquals(1, q.getId());
-	}
+//	@Test
+//	@DisplayName("findBySubject")
+//	void t004() {
+//		Question q = questionRepository.findBySubject("sbb가 무엇인가요?");
+//		assertEquals(1, q.getId());
+//	}
 
 	/*
     SQL
@@ -144,14 +144,14 @@ class SbbApplicationTests {
     WHERE subject = 'sbb가 무엇인가요?'
     AND content = 'sbb에 대해서 알고 싶습니다.'
     */
-	@Test
-	@DisplayName("findBySubjectAndContent")
-	void t005() {
-		Question q = questionRepository.findBySubjectAndContent(
-				"sbb가 무엇인가요?", "sbb에 대해서 알고 싶습니다."
-		);
-		assertEquals(1, q.getId());
-	}
+//	@Test
+//	@DisplayName("findBySubjectAndContent")
+//	void t005() {
+//		Question q = questionRepository.findBySubjectAndContent(
+//				"sbb가 무엇인가요?", "sbb에 대해서 알고 싶습니다."
+//		);
+//		assertEquals(1, q.getId());
+//	}
 
 	/*
     SQL

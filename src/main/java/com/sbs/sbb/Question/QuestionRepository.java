@@ -12,6 +12,7 @@ public interface QuestionRepository extends JpaRepository<Question, Integer> {
     Question findBySubject(String subject);
 
     Question findBySubjectAndContent(String subject, String content);
+
     Page<Question> findAll(Specification<Question> spec, Pageable pageable);
 
     @Transactional
